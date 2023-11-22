@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.wrapper {
+    
+    /* padding: 50px; */
+}
+
+.apps {
+    background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 5px;
+    margin:0 auto;
+    margin-top: 20px;
+}
+
+.app {
+    width: 220px;
+    height: 175px;
+    background-color: aqua;
+    border: 2px solid black;
+}
