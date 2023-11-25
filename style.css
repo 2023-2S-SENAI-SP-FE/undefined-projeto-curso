@@ -25,7 +25,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0px -60px 10px #b50303;
+    box-shadow: inset 0px -60px 10px #b503033c;
+    border-bottom-left-radius: 33px;
+    border-bottom-right-radius: 33px;
     width: 50%;
     height: 593px;
     margin: 0px;
@@ -49,9 +51,11 @@ body {
 
 .alertas {
     display: flex;
+    margin: 0%;
+    border-image: 0%;
     justify-content: space-around;
     align-items: center;
-    background-color: #000000;
+    background-color: #980b0b;
     width: auto;
     height: 190px;
 }
