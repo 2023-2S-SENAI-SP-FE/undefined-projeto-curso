@@ -31,3 +31,8 @@ body {
     background-color: aqua;
     border: 2px solid black;
 }
+
+canvas {
+    margin: 0 auto;
+    display: block;
+  }
