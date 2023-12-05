@@ -1,0 +1,72 @@
+body {
+    background: #eee;
+    padding: 0;
+    margin:0;
+}
+container {
+    background: #fff;
+width: 60%;
+margin-left: auto;
+margin-right: auto;
+padding: 1rem;
+}
+.btn{
+    background: #E52325;
+    border:none;
+    color:#fff;
+    padding:15px 20px;
+    border-radius: 3px;
+}
+.flash{
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes flash {
+    0% {
+        background: #E52325;
+
+    }
+    50%{
+        background: #9d0025;
+    }
+    100%{
+        background-color: #E52325;
+    }
+}
+body {
+    background: #eee;
+    padding: 0;
+    margin:0;
+}
+container {
+    background: #fff;
+width: 60%;
+margin-left: auto;
+margin-right: auto;
+padding: 1rem;
+}
+.btn{
+    background: #E52325;
+    border:none;
+    color:#fff;
+    padding:15px 20px;
+    border-radius: 3px;
+}
+.flash{
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes flash {
+    0% {
+        background: #E52325;
+
+    }
+    50%{
+        background: #9d0025;
+    }
+    100%{
+        background-color: #E52325;
+    }
+}
