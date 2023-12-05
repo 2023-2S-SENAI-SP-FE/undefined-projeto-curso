@@ -12,7 +12,7 @@ body {
     display: flex;
     background-color: #000000;
     width: 50%;
-    height: 593px;
+    height: 443px;
     margin: 0px;
     line-height: 75px;
     font-size: 30px;
@@ -29,7 +29,7 @@ body {
     border-bottom-left-radius: 33px;
     border-bottom-right-radius: 33px;
     width: 50%;
-    height: 593px;
+    height: 443px;
     margin: 0px;
     text-align: center;
     line-height: 75px;
@@ -41,7 +41,7 @@ body {
     background-color: #000000;
     display: flex;
     width: 50%;
-    height: 593px;
+    height: 443px;
     margin: 0px;
     text-align: center;
     line-height: 75px;
@@ -57,15 +57,25 @@ body {
     align-items: center;
     background-color: #980b0b;
     width: auto;
-    height: 190px;
+    height: 140px;
 }
 
 
 
 
-button {
-    
-
-}
-
-
+.elemento-piscando {
+    animation: piscar 700ms infinite;
+  }
+  
+  /* Definir a animação */
+  @keyframes piscar {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
