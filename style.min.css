@@ -11,7 +11,7 @@ margin-right: auto;
 padding: 1rem;
 }
 .btn{
-    background: #E52325;
+    background: #23e530;
     border:none;
     color:#fff;
     padding:15px 20px;
@@ -19,19 +19,19 @@ padding: 1rem;
 }
 .flash{
     animation-name: flash;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 @keyframes flash {
     0% {
-        background: #E52325;
+        background: #05871b;
 
     }
     50%{
-        background: #9d0025;
+        background: #0ad92c;
     }
     100%{
-        background-color: #E52325;
+        background-color: #66f36a;
     }
 }
 body {
@@ -47,7 +47,7 @@ margin-right: auto;
 padding: 1rem;
 }
 .btn{
-    background: #E52325;
+    background: #23e530;
     border:none;
     color:#fff;
     padding:15px 20px;
@@ -60,13 +60,13 @@ padding: 1rem;
 }
 @keyframes flash {
     0% {
-        background: #E52325;
+        background: #23e530;
 
     }
     50%{
-        background: #9d0025;
+        background: #05871b;
     }
     100%{
-        background-color: #E52325;
+        background-color: #66f36a;
     }
 }
