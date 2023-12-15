@@ -2,6 +2,7 @@ body {
     background: #eee;
     padding: 0;
     margin:0;
+    
 }
 container {
     background: #fff;
@@ -34,18 +35,28 @@ padding: 1rem;
         background-color: #66f36a;
     }
 }
+
+
+.imagem {
+
+}
 body {
     background: #eee;
     padding: 0;
     margin:0;
+    height: 30%;
 }
 container {
     background: #fff;
-width: 60%;
-margin-left: auto;
-margin-right: auto;
-padding: 1rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+
+
 }
+
+
 .btn{
     background: #23e530;
     border:none;
