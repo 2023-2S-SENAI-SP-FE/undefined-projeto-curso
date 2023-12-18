@@ -6,10 +6,11 @@ body {
 }
 container {
     background: #fff;
-width: 60%;
-margin-left: auto;
-margin-right: auto;
-padding: 1rem;
+    width: 10%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
 }
 .btn{
     background: #23e530;
@@ -37,18 +38,28 @@ padding: 1rem;
 }
 
 
-.imagem {
 
+
+.mask1 {  
+    
+    -webkit-mask-image:url(seta direita.png);
+    mask-image: url(seta direita.png);
+    -webkit-mask-size: 100%;
+     mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat
 }
 body {
     background: #eee;
     padding: 0;
     margin:0;
-    height: 30%;
+    height: 10%;
+    width: 10%;
 }
 container {
     background: #fff;
-    width: 60%;
+    width: 10%;
+    height: 1%;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
