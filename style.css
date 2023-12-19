@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+    background-color: #840505;
 }
 
 .painel {
@@ -10,30 +10,38 @@ body {
 
 .velo-avisos {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c70808;
     background-color: #000000;
+    box-shadow: 3px 3px 5px #840505;
     width: 50%;
     height: 443px;
-    margin: 0px;
+    margin:0%;
     line-height: 75px;
+    border-bottom-left-radius: 40px;
+    border-radius: 30px;
     font-size: 30px;
-    /* border-bottom-right-radius: 160px; */
+    background: linear-gradient(to bottom, #000000 80%,#840505 95%);
+    
     
 }
 
+
+
 .funcoes-seta {
     background-color: #000000;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0px -60px 10px #b503033c;
-    border-bottom-left-radius: 33px;
-    border-bottom-right-radius: 33px;
     width: 50%;
     height: 443px;
     margin: 0px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+    background: linear-gradient(to top, #840505 10%, transparent, #000000 30%);
     
 }
 
@@ -46,16 +54,20 @@ body {
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-    border-bottom-right-radius: 160px;
+    border-radius: 30px;
+    border-bottom-right-radius: 40px;
+    background: linear-gradient(to bottom, #000000 80%,#840505 95%);
+    
 }
 
 .alertas {
     display: flex;
     margin: 0%;
-    border-image: 0%;
+    border-radius: 50px;
     justify-content: space-around;
     align-items: center;
-    background-color: #980b0b;
+    box-shadow: inset 1px 1px 8px 13px #840505;
+    background-color:#000000;
     width: auto;
     height: 140px;
 }
@@ -63,19 +75,3 @@ body {
 
 
 
-.elemento-piscando {
-    animation: piscar 700ms infinite;
-  }
-  
-  /* Definir a animação */
-  @keyframes piscar {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
