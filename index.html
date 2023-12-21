@@ -38,7 +38,7 @@
                     <div class="data">
 
                     </div>
-                    <div class="relogio">
+                    <div class="relogio" id="clock" >
 
                     </div>
                     <!-- <button type="button">Serviços</button> -->
@@ -52,30 +52,6 @@
                
             </div>
         </div>
-        
-        <div id="clock"></div>
 
-        <script>
-          function updateClock() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
-      
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-      
-            var timeString = hours + ":" + minutes + ":" + seconds;
-      
-            document.getElementById("clock").innerText = timeString;
-          }
-      
-          // Atualizar o relógio a cada segundo
-          setInterval(updateClock, 1000);
-      
-          // Inicializar o relógio quando a página carrega
-          updateClock();
-        </script>
     </body>
 </html>
