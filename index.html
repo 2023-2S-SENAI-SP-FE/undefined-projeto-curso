@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Painel</title>
+    </head>
+    <body>
+        <div class="alertas">
+            <div class="a-pisca"><img src="https://triniradio.net/img/article/77/what-15-symbols-on-your-cars-dashboard-mean-10.jpg" width="100" height="80">
+            </div>
+
+            <div class="a-freiop"><img src="https://mocktheorytest.com/resources/wp-content/uploads/2016/02/handbrake-light-2.gif" width="120" height="80">
+            </div>
+
+        </div>
+        <div class="painel">
+            <div class="velocimetro">
+                <div class="funcao-velo">
+                    <span id="speed">0</span> km/h
+                </div>
+                <div class="marcha">
+    
+                </div>
+            </div>
+            <div class="geral">
+                <div class="drive-mode">
+                    
+                </div>
+                <div class="gps">
+    
+                </div>
+                <div class="status-do-carro">
+
+                </div>
+                <div class="data-hora-service">
+                    <div class="data">
+
+                    </div>
+                    <div class="relogio">
+
+                    </div>
+                    <!-- <button type="button">Serviços</button> -->
+                </div>
+
+            </div>
+            <div class="nivel-bateria">
+                <div class="bateria">
+                    
+                </div>
+               
+            </div>
+        </div>
+        
+        <div id="clock"></div>
+
+        <script>
+          function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+      
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+      
+            var timeString = hours + ":" + minutes + ":" + seconds;
+      
+            document.getElementById("clock").innerText = timeString;
+          }
+      
+          // Atualizar o relógio a cada segundo
+          setInterval(updateClock, 1000);
+      
+          // Inicializar o relógio quando a página carrega
+          updateClock();
+        </script>
+    </body>
+</html>
