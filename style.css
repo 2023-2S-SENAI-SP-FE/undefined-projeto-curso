@@ -1,54 +1,28 @@
 body {
-    background-color: #840505;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.alertas {
+    display: flex;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 4px 6px 3px #8f8b8b;
+    background-color:#000000;
+    width: 60%;
+    height: 100px;
 }
 
 .painel {
+    background-color: #2919d8;
     display: flex;
     justify-content: space-between;
-    
-}
-
-.velo-avisos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #c70808;
-    background-color: #000000;
-    box-shadow: 3px 3px 5px #840505;
-    width: 50%;
-    height: 443px;
-    margin:0%;
-    line-height: 75px;
-    border-bottom-left-radius: 40px;
-    border-radius: 30px;
-    font-size: 30px;
-    background: linear-gradient(to bottom, #000000 80%,#840505 95%);
-    
-    
-}
-
-
-
-.funcoes-seta {
-    background-color: #000000;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 443px;
-    margin: 0px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-    background: linear-gradient(to top, #840505 10%, transparent, #000000 30%);
-    
-}
-
-.motor-avisos {
-    background-color: #000000;
-    display: flex;
-    width: 50%;
+    width: 208vh;
     height: 443px;
     margin: 0px;
     text-align: center;
@@ -56,21 +30,40 @@ body {
     font-size: 30px;
     border-radius: 30px;
     border-bottom-right-radius: 40px;
-    background: linear-gradient(to bottom, #000000 80%,#840505 95%);
-    
 }
 
-.alertas {
+.velocimetro {
+    background-color: #c70808;
+    width: 60vh;
     display: flex;
-    margin: 0%;
-    border-radius: 50px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    box-shadow: inset 1px 1px 8px 13px #840505;
-    background-color:#000000;
-    width: auto;
-    height: 140px;
 }
+
+.geral {
+    display: flex;
+    width: 65vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f8cb02;
+}
+
+
+
+.nivel-bateria {
+    background-color: #1ada09;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vh;
+    margin: 0px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+
 
 
 
