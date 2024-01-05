@@ -15,6 +15,8 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+  
+
 // inicia perda de velocidade após a tecla "w" ser liberada
 document.addEventListener("keyup", (event) => {
   if (event.key === "w" && !desacelerando) {
