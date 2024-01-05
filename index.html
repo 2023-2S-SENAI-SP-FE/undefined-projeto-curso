@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de carro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Painel de carro</h1>
+  </header>
+  <main>
+    <section class="velocidade">
+      <h2>Velocidade</h2>
+      <p id="velocidade">0 km/h</p>
+    </section>
+    <section class="setas">
+      <h2>Setas</h2>
+      <ul>
+        <li id="seta-esquerda">
+          <svg viewBox="0 0 100 100" width="50" height="40">
+      <path d="M50 50 L50 0 L0 50" stroke="red" stroke-width="5" />
+    </svg>
+        </li>
+        <li id="seta-direita">
+          <svg viewBox="0 0 100 100" width="50" height="50">
+      <path d="M50 50 L50 100 L0 50" stroke="green" stroke-width="5" />
+    </svg>
+        </li>
+      </ul>
+    </section>
+    <section class="bateria">
+      <h2>Níveis de bateria</h2>
+      <p id="bateria">100%</p>
+    </section>
+    <section class="autonomia">
+      <h2>Autonomia</h2>
+      <p id="autonomia">500 km</p>
+    </section>
+    <section class="temperatura">
+      <h2>Temperatura</h2>
+      <p id="temperatura">25°C</p>
+    </section>
+    <section class="recarga">
+      <h2>Recarga</h2>
+      <p id="recarga">0%</p>
+    </section>
+    <section class="controles">
+      <button id="acelerar">Acelerar</button>
+      <button id="frear">Frear</button>
+      <button id="mudar-marcha">Mudar de marcha</button>
+      <button id="ligar-desligar">Ligar/desligar</button>
+    </section>
+  </main>
+  <footer>
+ 
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

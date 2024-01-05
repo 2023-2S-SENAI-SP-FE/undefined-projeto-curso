@@ -1,0 +1,110 @@
+body {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  main {
+    margin: 1rem 0;
+  }
+  
+  .velocidade {
+    margin: 1rem 0;
+  }
+  
+  .setas {
+    margin: 1rem 0;
+  }
+  
+  .bateria {
+    margin: 1rem 0;
+  }
+  
+  .autonomia {
+    margin: 1rem 0;
+  }
+  
+  .temperatura {
+    margin: 1rem 0;
+  }
+  
+  .recarga {
+    margin: 1rem 0;
+  }
+  
+  #velocidade {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  #seta-esquerda {
+    width: 2rem;
+    height: 2rem;
+    background-color: green;
+    border-radius: 50%;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  #seta-direita {
+    width: 2rem;
+    height: 2rem;
+    background-color: green;
+    border-radius: 50%;
+  }
+  
+  #bateria {
+    font-size: 1.5rem;
+  }
+  
+  #autonomia {
+    font-size: 1.5rem;
+  }
+  
+  #temperatura {
+    font-size: 1.5rem;
+  }
+  
+  #recarga {
+    font-size: 1.5rem;
+  }
+  
+  .controles {
+    margin-top: 1rem;
+  }
+  
+  #acelerar {
+    background-color: #222;
+    color: #fff;
+    font-size: 1.5rem;
+    
+  }
+    
+   #frear {
+    background-color: #222;
+    color: #fff;
+    font-size: 1.5rem;
+     
+    }
+  
+  #mudar-marcha {
+    background-color: #222;
+    color: #fff;
+    font-size: 1.5rem;
+     
+    }
+  
+  #ligar-desligar {
+    background-color: #222;
+    color: #fff;
+    font-size: 1.5rem;
+     
+    }
