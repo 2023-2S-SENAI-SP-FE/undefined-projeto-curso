@@ -5,56 +5,75 @@ body {
     
 }
 container {
-    background: #fff;
-    width: 10%;
-    height: 10%;
+    background: #5dd763;
+    width: 20%;
+    height: 20%;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
 }
-.btn{
-    background: #23e530;
+
+.setaDireita {  
+    
+    -webkit-mask-image:url(icons8-flecha-50.png);
+     mask-image: url(icons8-flecha-50.png);
+    -webkit-mask-size: 100%;
+     mask-size: 100%;
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat
+    
+
+    
+
+}
+.sD {
+    background: #8aef8a;
     border:none;
-    color:#fff;
+    color:#64e864;
     padding:15px 20px;
     border-radius: 3px;
+    position: absolute;top: 110px; left:6px;
+    padding: 0.6em 0.8em;
+
+    
+    
+    
 }
-.flash{
+.flash-sD {
     animation-name: flash;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 @keyframes flash {
     0% {
-        background: #05871b;
+        background: #98ef98;
+        opacity: 1;
 
     }
     50%{
-        background: #0ad92c;
+        background: #ecf0ed;
+        opacity: 0;
     }
     100%{
-        background-color: #66f36a;
+        background-color: #98f098;
+        opacity: 1;
     }
 }
 
 
 
 
-.mask1 {  
-    
-    -webkit-mask-image:url(setadireita.png);
-    mask-image: url(setadireita.png);
-    -webkit-mask-size: 100%;
-     mask-size: 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat
-}
+
+
+
+
+
+
 body {
     background: #eee;
     padding: 0;
     margin:0;
-    height: 10%;
-    width: 10%;
+    
 }
 container {
     background: #fff;

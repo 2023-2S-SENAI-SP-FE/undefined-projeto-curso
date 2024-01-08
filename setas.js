@@ -1,5 +1,5 @@
 function ativar (){
-    document.querySelector("button.btn").classList="flash btn"
+    document.querySelector("button.sD").classList="flash sD"
 }
 
 
