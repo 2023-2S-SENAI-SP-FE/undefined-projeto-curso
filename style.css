@@ -1,0 +1,56 @@
+container {
+    background: #5dd763;
+    width: 20%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.seta-direita {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.seta-acesa {
+    z-index: -1;
+}
+
+/* .sD {
+    background: #8aef8a;
+    border: none;
+    color: #64e864;
+    padding: 15px 20px;
+    border-radius: 3px;
+    position: absolute;
+    top: 110px;
+    left: 6px;
+    padding: 0.6em 0.8em;
+    position: relative;
+} */
+
+/* USE UM SELETOR MELHOR */
+button { 
+    position: absolute;
+    top: 120px;
+}
+
+.flash-sD {
+    animation-name: flash;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}

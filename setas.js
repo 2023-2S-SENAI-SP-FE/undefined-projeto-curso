@@ -1,6 +1,4 @@
-function ativar (){
-    document.querySelector("button.sD").classList="flash sD"
+function ativar() {
+    document.querySelector(".seta-acesa").classList.toggle('flash-sD');
 }
-
-
 

@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Setas</title>
 </head>
-   
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+
+<link rel="stylesheet" type="text/css" href="style.css">
 
 
-    <body>
-        <div class="container">
-            <button type="button" onclick="ativar()" class="sD">Seta Direita</button>
-            <div class="setaDireita">
-                <img src="icons8-flecha-50.png" alt="Seta Direita" width="5%" height="5%">
-            </div>
-            
-        </div>  
-        
+<body>
+    <div class="container">
+        <button type="button" onclick="ativar()">Seta Direita</button>
+        <div class="setaDireita">
+            <img src="seta-direita-apagada.png" alt="Seta Direita" width="100" 
+                class="seta-direita seta-apagada">
+            <img src="seta-direita-acesa.png" alt="Seta Direita Acesa" width="100"
+                class="seta-direita seta-acesa">
+        </div>
+
+    </div>
+
+    <script src="./setas.js"></script>
+</body>
+
+</html>
