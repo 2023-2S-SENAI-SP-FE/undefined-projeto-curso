@@ -12,14 +12,14 @@ container {
     margin-right: auto;
     padding: 1rem;
 }
-.btn{
+.btn {
     background: #23e530;
     border:none;
     color:#fff;
     padding:15px 20px;
     border-radius: 3px;
 }
-.flash{
+.flash {
     animation-name: flash;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -40,15 +40,20 @@ container {
 
 
 
-.mask1 {  
+.setaDireita {  
     
-    -webkit-mask-image:url(seta direita.png);
-    mask-image: url(seta direita.png);
+    -webkit-mask-image:url(setadireita.png);
+    mask-image: url(setadireita.png);
     -webkit-mask-size: 100%;
      mask-size: 100%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat
 }
+
+
+
+
+
 body {
     background: #eee;
     padding: 0;
