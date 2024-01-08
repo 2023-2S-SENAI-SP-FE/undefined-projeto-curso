@@ -42,8 +42,8 @@ container {
 
 .mask1 {  
     
-    -webkit-mask-image:url(seta direita.png);
-    mask-image: url(seta direita.png);
+    -webkit-mask-image:url(setadireita.png);
+    mask-image: url(setadireita.png);
     -webkit-mask-size: 100%;
      mask-size: 100%;
     -webkit-mask-repeat: no-repeat;
