@@ -1,5 +1,5 @@
 container {
-    background: #5dd763;
+    background: #3ae042;
     width: 20%;
     height: 20%;
     margin-left: auto;
@@ -32,11 +32,56 @@ container {
 
 /* USE UM SELETOR MELHOR */
 button { 
-    position: absolute;
+    position: relative;
     top: 120px;
 }
 
 .flash-sD {
+    animation-name: flash;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+
+container {
+    background: #5dd763;
+    width: 20%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.seta-esquerda {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+.seta-acesa {
+    z-index: -1;
+}
+
+
+button { 
+    position:relative;
+    top: 120px;
+}
+
+.flash {
     animation-name: flash;
     animation-duration: .5s;
     animation-iteration-count: infinite;
