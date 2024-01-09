@@ -1,2 +1,2 @@
 # undefined-projeto-curso
-Projeto de 
+Desenvolvimento de Painel e Central multimídia de um veículo. 
