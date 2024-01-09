@@ -7,15 +7,16 @@
         <title>Painel</title>
     </head>
     <body>
+
         <div class="seletor-de-marcha">
-            <button class="parke" type="button">P</button>
-            <button class="neutral" type="button">N</button>
-            <button class="drive" type="button">D</button>
-            <button class="reverse" type="button">R</button>
+            <button id="parke"  type="button">P</button>
+            <button id="neutral" type="button">N</button>
+            <button id="drive" onclick="seletorDrive()" type="button">D</button>
+            <button id="reverse" onclick="seletorReverse()" type="button">R</button>
         </div>
 
         <div class="velocimetro">
-            Velocidade: <span id="speed">0</span> km/h
+            <span id="speed">0</span> km/h
         </div>
         <script src="./conducao-carro.js"></script>
     </body>
