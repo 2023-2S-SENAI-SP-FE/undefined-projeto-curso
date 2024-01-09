@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="pressaopneus.css">
+  
   <title>Relógio em JavaScript</title>
   <style>
     body {
@@ -22,6 +25,12 @@
 </head>
 <body>
   <div id="clock"></div>
+  
+  <h1>Pressão do pneu</h1>
+    <div id="numero-superior">
+    </div>
+    <div id="numero-inferior">
+    </div>
 
   <script>
     function updateClock() {
@@ -45,5 +54,6 @@
     // Inicializar o relógio quando a página carrega
     updateClock();
   </script>
+  <script src="pressaopneus.js"></script>
 </body>
 </html> 

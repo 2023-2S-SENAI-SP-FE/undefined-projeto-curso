@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#numero-superior,
+#numero-inferior {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#numero-superior p,
+#numero-inferior p {
+    border: 2px solid #29147c;
+    padding: 10px;
+    width: 80px;
+    margin: 0;
+}  
