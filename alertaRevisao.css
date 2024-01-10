@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 0;
+}
+
+.car-panel {
+    text-align: center;
+}
+
+#mileage {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: rgb(161, 154, 154);
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
