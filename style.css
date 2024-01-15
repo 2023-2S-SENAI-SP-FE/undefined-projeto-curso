@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#phone-container {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+#phone-screen {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#phone-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button:nth-child(10),
+button:nth-child(11) {
+    grid-column: span 2;
+}
+
+button active {
+    background-color: #555;
+}

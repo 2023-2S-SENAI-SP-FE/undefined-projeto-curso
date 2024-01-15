@@ -1,49 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relógio em JavaScript</title>
-  <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-
-    #clock {
-      font-size: 2em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Telefone</title>
 </head>
 <body>
-  <div id="clock"></div>
+    <div id="phone-container">
+        <div id="phone-screen"></div>
+        <div id="phone-buttons">
+            <button onclick="dialNumber('1')">1</button>
+            <button onclick="dialNumber('2')">2</button>
+            <button onclick="dialNumber('3')">3</button>
+            <button onclick="dialNumber('4')">4</button>
+            <button onclick="dialNumber('5')">5</button>
+            <button onclick="dialNumber('6')">6</button>
+            <button onclick="dialNumber('7')">7</button>
+            <button onclick="dialNumber('8')">8</button>
+            <button onclick="dialNumber('9')">9</button>
+            <button onclick="dialNumber('0')">0</button>
+            <button onclick="call()">Call</button>
+            <button onclick="endCall()">End Call</button>
+        </div>
+    </div>
 
-  <script>
-    function updateClock() {
-      var now = new Date();
-      var hours = now.getHours();
-      var minutes = now.getMinutes();
-      var seconds = now.getSeconds();
-
-      hours = hours < 10 ? "0" + hours : hours;
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-
-      var timeString = hours + ":" + minutes + ":" + seconds;
-
-      document.getElementById("clock").innerText = timeString;
-    }
-
-    // Atualizar o relógio a cada segundo
-    setInterval(updateClock, 1000);
-
-    // Inicializar o relógio quando a página carrega
-    updateClock();
-  </script>
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
