@@ -16,3 +16,9 @@
     height: 100%;
     object-fit: cover; /* Para cobrir todo o contêiner, mantendo a proporção do vídeo */
   }
+=======
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
