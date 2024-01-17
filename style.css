@@ -1,24 +1,23 @@
-.loading-video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* Cor de fundo enquanto o vídeo carrega */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100%; /* Um valor alto para garantir que esteja na frente de outros elementos */
-  }
-  
-  .loading-video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Para cobrir todo o contêiner, mantendo a proporção do vídeo */
-  }
-=======
 .body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.loading-video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Cor de fundo enquanto o vídeo carrega */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100%; /* Um valor alto para garantir que esteja na frente de outros elementos */
+}
+  
+.loading-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para cobrir todo o contêiner, mantendo a proporção do vídeo */
 }
