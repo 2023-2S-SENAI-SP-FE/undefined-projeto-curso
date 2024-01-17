@@ -23,6 +23,7 @@ body {
     padding: 20px;
     text-align: center;
     font-size: 18px;
+    height: 2rem;
 }
 
 #phone-buttons {
@@ -40,8 +41,8 @@ button {
     border: none;
 }
 
-button:nth-child(10),
-button:nth-child(11) {
+/* button:nth-child(12), */
+button:nth-child(13) {
     grid-column: span 2;
 }
 
