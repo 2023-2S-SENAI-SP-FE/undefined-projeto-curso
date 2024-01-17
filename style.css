@@ -1,5 +1,104 @@
-.body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.img{
+  background-color: tomato;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  top: 50%;
+  left: 50%;
+
+}
+
+.img:hover{
+  background-color: #ff4c2c;
+}
+
+.modal-container{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0000004b;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal{
+  width: 60%;
+  min-width: 100%;
+  min-height: 100%;
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+
+.modal-container.mostrar{
+  display: flex;
+}
+
+.mostrar .modal{
+  animation: animate-modal .3s;
+}
+
+@keyframes animate-modal {
+  from{
+      opacity: 0;
+      transform: translate3d(0, -20px, 0);
+  }
+
+  to{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+#progress-bar {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  position: relative;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #4CAF50;
+  transition: width 600ms ease-in-out, background-color 1s ease-in-out;
+}
+
+#controle-arcondicionado {
+  display: flex;
+  align-items: center;
+}
+
+#controle-arcondicionado img {
+  margin: 0 10px;
+  cursor: pointer;
 }

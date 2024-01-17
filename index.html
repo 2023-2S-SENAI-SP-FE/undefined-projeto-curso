@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ar Condicionado</title>
+    <title>App Music multimídia</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="controle-arcondicionado">
-        <p>Temperatura: <span id="temperatura">20</span>°C</p>
-        <button onclick="aumentarTemperatura()">Aumentar</button>
-        <button onclick="diminuirTemperatura()">Diminuir</button>
+    <a href="https://open.spotify.com/intl-pt?flow_ctx=b65cbe8c-a422-49e8-af02-717909d9e2ca%3A1705086370">
+        <img src="https://tm.ibxk.com.br/2022/06/10/10120016121119.jpg?ims=1200x675" width="150" height="90" onclick="openModal()" class="img">
+    </a>
+
+    <div id="modal-container" class="modal-container">
+        <div class="modal"><p>
+        </p></div>
     </div>
 
-    <script src="./ar-condicionado.js"></script>
+    
+    <div id="progress-bar">
+      <div id="progress-fill"><p><span id="temperatura">20</span>°C</p></div>
+    </div>
+    
+    <div id="controle-arcondicionado">
+        
+      <img src="https://st5.depositphotos.com/72897924/62253/v/450/depositphotos_622530064-stock-illustration-beautiful-snowflake-icon-vector-illustration.jpg" width="100px" height="100px" onclick="diminuirTemperatura()"></img>
+      <img src="https://img.myloview.com/stickers/fire-sign-open-flame-symbol-monochrome-icon-isolated-on-black-background-trendy-symbol-for-design-and-websites-presentation-or-mobile-application-700-178624268.jpg" width="100px" height="100px" onclick="aumentarTemperatura()"></img>
+    </div>
+    
+    <script src="ar-condicionado.js"></script>
+    <script src="musica.js"></script>
 </body>
 </html>
