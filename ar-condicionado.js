@@ -1,19 +1,42 @@
-var temperaturaAtual = 20; // Temperatura inicial
 
-function aumentarTemperatura() {
-    if (temperaturaAtual < 30) { // Limite arbitrário de 30°C
-        temperaturaAtual++;
-        atualizarTemperatura();
+function updateProgressBar() {
+    var progressBar = document.getElementById('progress-fill');
+    var temperatura = parseInt(document.getElementById('temperatura').innerText);
+
+    
+    var targetPercentage = (temperatura - 10) * 5; 
+
+    
+    var fillWidth = targetPercentage / 100 * progressBar.parentElement.clientWidth;
+
+    progressBar.style.width = fillWidth + 'px';
+
+    
+    if (fillWidth >= progressBar.parentElement.clientWidth / 2) {
+      progressBar.style.backgroundColor = '#FFA500'; 
     }
-}
+  }
 
-function diminuirTemperatura() {
-    if (temperaturaAtual > 16) { // Limite arbitrário de 16°C
-        temperaturaAtual--;
-        atualizarTemperatura();
+  function diminuirTemperatura() {
+    var temperaturaElement = document.getElementById('temperatura');
+    var temperatura = parseInt(temperaturaElement.innerText);
+
+    if (temperatura > 10) {
+      temperatura--;
+      temperaturaElement.innerText = temperatura;
+      updateProgressBar();
     }
-}
+  }
 
-function atualizarTemperatura() {
-    document.getElementById("temperatura").innerHTML = temperaturaAtual;
-}
+  function aumentarTemperatura() {
+    var temperaturaElement = document.getElementById('temperatura');
+    var temperatura = parseInt(temperaturaElement.innerText);
+
+    if (temperatura < 30) {
+      temperatura++;
+      temperaturaElement.innerText = temperatura;
+      updateProgressBar();
+    }
+  }
+
+  updateProgressBar();
