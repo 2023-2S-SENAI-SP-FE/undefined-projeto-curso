@@ -3,28 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setas</title></head>
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <body>
-        <div class="container">
-            <button type="button" onclick="ativar()" class="btn">Seta Direita</button>
-            <div class="setaDireita">
+    <title>Painel Interativo</title>
+</head>
+<body>
+    <header></header>
+    <main class="tela">
+        <div class="temp" style="color:aliceblue;">
+            <div class="dados-atuais">
+                <div class="local">
+                    <h2 class="cidade">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>São Paulo</span>
+                    </h2>
+                    <h2 class="clima">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <span>
+                            24ºC
+                        </span>
+                    </h2>
+                </div>
+                <h2>01:22 PM</h2>
             </div>
-            <img src="icons8-flecha-50.png" alt="setaDireita" width="50%" height="50%">
-            <img src="icons8-flecha-50 (1).png" alt="setaDireita" width="50%" height="50%">
+            <div class="previsoes">
+                <div class="previsao" id="previsao1">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 class="hora-temp">
+                        <p>2 PM</p>
+                        <span>23º</span>
+                    </h2>
+                </div>
+                <div class="previsao" id="previsao2">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 class="hora-temp">
+                        <p>2 PM</p>
+                        <span>23º</span>
+                    </h2>
+                </div>
+                <div class="previsao" id="previsao3">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 class="hora-temp">
+                        <p>2 PM</p>
+                        <span>23º</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="controles">
+            <div class="controle" id="controle-1">
+                <img src="./assets/icones-tela-controles/lock.svg" alt="Trava as portas">
+            </div>
+            <div class="controle" id="controle-2">
+                <img src="./assets/icones-tela-controles/bluetooth.svg" alt="Liga os bluetooth">
+            </div>
+            <div class="controle" id="controle-3">
+                <i class="fa-brands fa-spotify"></i>
+            </div>
+            <div class="controle" id="controle-4">
+                <img src="./assets/icones-tela-controles/call.svg" alt="Faz ligação">
+            </div>
+            <div class="controle" id="controle-5">
+                <img src="./assets/icones-tela-controles/voice.svg" alt="Ativa controles de voz">
+            </div>
+            <div class="controle" id="controle-6">
+                <img src="./assets/icones-tela-controles/healights.svg" alt="Liga farol alto">
+            </div>
+        </div>
+        <div class="espelhos">
+            <div class="container-espelho espelho-esquerdo">
+                <img class="setas seta-esquerda" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-cima" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-direita" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-baixo" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="espelho" src="./assets/icones-tela-controles/car-rearview-mirror-left-icon.svg" alt="espelho esquerdo">
+            </div>
+            <div class="container-espelho espelho-direito">
+                <img class="setas seta-esquerda" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-cima" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-direita" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-baixo" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="espelho" src="./assets/icones-tela-controles/car-rearview-mirror-right-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="controle-ac">
+            <h2>Ar condicionado</h2>
+            <div class="slidecontainer">
+                <div class="tooltip"></div>
+                <input type="range" min="16" max="36" value="26" class="slider" id="myRange">
+            </div>
+            <div class="controles-ac">
+                <div class="botoes" id="botao-1">
+                    <img src="./assets/icones-tela-controles/ac/air.svg" alt="liga ar">
+                </div>
+                <div class="botoes" id="botao-2">
+                    <img src="./assets/icones-tela-controles/ac/ac.svg" alt="liga ar condicionado">
+                </div>
+                <div class="botoes" id="botao-3">
+                    <img src="./assets/icones-tela-controles/ac/fan.svg" alt="liga ventilador">
+                </div>
+                <div class="botoes" id="botao-4">
+                    <img src="./assets/icones-tela-controles/ac/climate-1.svg" alt="ventila apenas por cima">
+                </div>
+                <div class="botoes" id="botao-5">
+                    <img src="./assets/icones-tela-controles/ac/climate-2.svg" alt="ventila por cima e por baixo">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer><p>&copy; 2024. Alguns direitos reservados.</p></footer>
 
-        </div>
-        
-            
-        </div>
-        <div class="container"<p></p>
-            <button type="button" class="flash btn">Seta Esquerda</button>
+    <script>
+        //elementos DOM
+        const slider = document.querySelector(".slider")
+        const tooltip = document.querySelector(".tooltip")
 
-        </div>
-        <div class="mask2">
-            <img src="https://thumbs.dreamstime.com/z/linha-do-s%C3%ADmbolo-da-seta-direita-110994547.jpg" alt="Seta Direita" width="50%" height="50%">
-        </div>
-<script src="setas.js"></script>
+        //Calcula o valor do slider
+        function customSlider() {
+            const maxVal = slider.getAttribute("max")
+            const val = (slider.value / maxVal) + "%"
+
+            tooltip.innerHTML = slider.value + "ºC"
+        }
+
+        //mostra valor do AC assim que a página carrega
+        customSlider()
+
+        //Apresenta o valor atual do slider
+        slider.addEventListener("input", () => {
+            customSlider()
+        })
+
+        //d1ead82ca8b95150aed4ecacf7d3dd2d
+    </script>
 </body>
 </html>
