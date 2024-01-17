@@ -22,11 +22,11 @@ body {
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 2rem;
     height: 2rem;
 }
 
-#phone-buttons {
+#phone-buttons form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
