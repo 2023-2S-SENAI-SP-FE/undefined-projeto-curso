@@ -111,6 +111,9 @@ main {
   align-items: center;
   justify-content: center;
 }
+.fa-spotify {
+  color: lineargradient;
+}
 
 /* Espelhos */
 .espelhos {
