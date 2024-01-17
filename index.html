@@ -15,12 +15,64 @@
         <div class="modal"></div>
     </div>
 
-    <div id="controle-arcondicionado">
-        <p>Temperatura: <span id="temperatura">20</span>°C</p>
-        <button onclick="aumentarTemperatura()">Aumentar</button>
-        <button onclick="diminuirTemperatura()">Diminuir</button>
-    </div>
     <script src="script.js"></script>
     <script src="./ar-condicionado.js"></script>
+
+    <div id="progress-bar">
+      <div id="progress-fill"><p><span id="temperatura">20</span>°C</p></div>
+    </div>
+    
+    <div id="controle-arcondicionado">
+      <!-- <p>Temperatura: <span id="temperatura">20</span>°C</p> -->
+      <img src="https://st5.depositphotos.com/72897924/62253/v/450/depositphotos_622530064-stock-illustration-beautiful-snowflake-icon-vector-illustration.jpg" width="100px" height="100px" onclick="diminuirTemperatura()"></img>
+      <img src="https://img.myloview.com/stickers/fire-sign-open-flame-symbol-monochrome-icon-isolated-on-black-background-trendy-symbol-for-design-and-websites-presentation-or-mobile-application-700-178624268.jpg" width="100px" height="100px" onclick="aumentarTemperatura()"></img>
+    </div>
+    
+    <script>
+      function updateProgressBar() {
+        var progressBar = document.getElementById('progress-fill');
+        var temperatura = parseInt(document.getElementById('temperatura').innerText);
+    
+        // Defina o valor da porcentagem desejada (50% neste caso)
+        var targetPercentage = (temperatura - 10) * 5; // Supondo que a temperatura varie de 10 a 30
+    
+        // Calcule a largura da barra de preenchimento com base na porcentagem
+        var fillWidth = targetPercentage / 100 * progressBar.parentElement.clientWidth;
+    
+        // Atualize a largura da barra de preenchimento
+        progressBar.style.width = fillWidth + 'px';
+    
+        // Verifique se a largura atingiu ou ultrapassou 50% e mude a cor gradualmente
+        if (fillWidth >= progressBar.parentElement.clientWidth / 2) {
+          progressBar.style.backgroundColor = '#FFA500'; // Cor a ser alterada
+        }
+      }
+    
+      function diminuirTemperatura() {
+        var temperaturaElement = document.getElementById('temperatura');
+        var temperatura = parseInt(temperaturaElement.innerText);
+    
+        if (temperatura > 10) {
+          temperatura--;
+          temperaturaElement.innerText = temperatura;
+          updateProgressBar();
+        }
+      }
+    
+      function aumentarTemperatura() {
+        var temperaturaElement = document.getElementById('temperatura');
+        var temperatura = parseInt(temperaturaElement.innerText);
+    
+        if (temperatura < 30) {
+          temperatura++;
+          temperaturaElement.innerText = temperatura;
+          updateProgressBar();
+        }
+      }
+    
+      // Chame a função de atualização da barra de progresso inicialmente
+      updateProgressBar();
+    </script>
+    
 </body>
 </html>
