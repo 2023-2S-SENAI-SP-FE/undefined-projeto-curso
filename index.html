@@ -11,6 +11,9 @@
 <body>
     <header></header>
     <main class="tela">
+        <div class="popup-message invisivel">
+            <p></p>
+        </div>
         <div class="temp" style="color:aliceblue;">
             <div class="dados-atuais">
                 <div class="local">
@@ -88,7 +91,7 @@
             </div>
         </div>
         <div class="controle-ac">
-            <h2>Ar condicionado</h2>
+            <h2>Ar Condicionado</h2>
             <div class="slidecontainer">
                 <div class="tooltip"></div>
                 <input type="range" min="16" max="36" value="26" class="slider" id="myRange">
@@ -145,6 +148,72 @@
         //-23.533773, -46.625290
         
         //https://dev.to/robsonmuniz16/how-to-make-a-popup-html-css-javascript-18ml
+
+        document.querySelector(".controles").addEventListener("click", (e) => {
+            if (e.target.closest("div").id === "controle-1" ) {
+                document.querySelector(".popup-message p").innerHTML = "Portas Trancadas."
+
+                document.querySelector(".popup-message").classList.remove("invisivel")
+
+                const timer = setTimeout(() => {
+                    document.querySelector(".popup-message").classList.add("invisivel")
+                }, 1000);         
+            } else if (e.target.closest("div").id === "controle-2" ) {
+                document.querySelector(".popup-message p").innerHTML = "Bluetooth ligado."
+
+                document.querySelector(".popup-message").classList.remove("invisivel")
+
+                const delay = setTimeout(() => {
+                    document.querySelector(".popup-message").classList.add("invisivel")
+                }, 1000);         
+            } else if (e.target.closest("div").id === "controle-3" ) {
+                document.querySelector(".popup-message p").innerHTML = "Spotify pressionado"
+
+                document.querySelector(".popup-message").classList.remove("invisivel")
+
+                setTimeout(() => {
+                    document.querySelector(".popup-message").classList.add("invisivel")
+                }, 1000);         
+            } else if (e.target.closest("div").id === "controle-4" ) {
+                document.querySelector(".popup-message p").innerHTML = "Ligação pressionado"
+
+                document.querySelector(".popup-message").classList.remove("invisivel")
+
+                setTimeout(() => {
+                    document.querySelector(".popup-message").classList.add("invisivel")
+                }, 1000);         
+            } else if (e.target.closest("div").id === "controle-5" ) {
+                document.querySelector(".popup-message p").innerHTML = "Controle de voz"
+
+                document.querySelector(".popup-message").classList.remove("invisivel")
+
+                setTimeout(() => {
+                    document.querySelector(".popup-message").classList.add("invisivel")
+                }, 1000);         
+            } else if (e.target.closest("div").id === "controle-6" ) {
+                document.querySelector(".popup-message p").innerHTML = "Liga farol alto"
+
+                document.querySelector(".popup-message").classList.remove("invisivel")
+
+                setTimeout(() => {
+                    document.querySelector(".popup-message").classList.add("invisivel")
+                }, 1000);         
+            }
+        })
+
+        document.querySelector(".controles-ac").addEventListener("click", (e) => {
+            if (e.target.closest("div").id === "botao-1") {
+                document.querySelector("#botao-1").classList.toggle("ativo")
+            } else if (e.target.closest("div").id === "botao-2") {
+                document.querySelector("#botao-2").classList.toggle("ativo")
+            } else if (e.target.closest("div").id === "botao-3") {
+                document.querySelector("#botao-3").classList.toggle("ativo")
+            } else if (e.target.closest("div").id === "botao-4") {
+                document.querySelector("#botao-4").classList.toggle("ativo")
+            } else if (e.target.closest("div").id === "botao-5") {
+                document.querySelector("#botao-5").classList.toggle("ativo")
+            }
+        })
     </script>
 </body>
 </html>
