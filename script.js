@@ -1,8 +1,8 @@
 let phoneScreen = document.getElementById('phone-screen');
 let conectado = false;
 let intervalo;
-var seconds = '00';
-var minutes = '00';
+let seconds = '00';
+let minutes = '00';
 
 // registra os números digitados
 function dialNumber(number) {
@@ -44,8 +44,8 @@ function call() {
 
 // contador de tempo da chamada
 function startTimer() {
-    var appendMinutes = document.getElementById("minutes")
-    var appendSeconds = document.getElementById("seconds")
+    let appendMinutes = document.getElementById("minutes")
+    let appendSeconds = document.getElementById("seconds")
 
     seconds++;
 
@@ -79,6 +79,8 @@ function endCall() {
         }, 1500);
         conectado = !conectado;
         clearInterval(intervalo);
+        seconds = '00';
+        minutes = '00';
     }
 }
 
