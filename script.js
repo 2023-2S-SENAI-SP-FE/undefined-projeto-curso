@@ -10,11 +10,13 @@ function dialNumber(number) {
 
 // realiza uma chamada
 function call() {
-    phoneScreen.innerHTML = 'Ligando...<br>';
-    phoneScreen.classList.add('phone-status')
-    setTimeout(function() {
+    phoneScreen.innerHTML = 'Chamando...';
+    phoneScreen.classList.add('phone-status');
+    toggleRingtone();
+    setTimeout(function () {
         phoneScreen.innerHTML = 'Conectado';
-    }, 2000);
+        toggleRingtone();
+    }, 4000);
     conectado = true;
 }
 
@@ -41,3 +43,5 @@ document.querySelector('#phoneScreenReset').addEventListener('click', () => {
         phoneScreen.innerHTML = '';
     }
 })
+
+

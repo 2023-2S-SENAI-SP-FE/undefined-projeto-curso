@@ -11,20 +11,20 @@
     <div id="phone-container">
         <div id="phone-screen"></div>
         <div id="phone-buttons">
-            <form action="" method="post">
-                <button type="button" onclick="dialNumber('1')">1</button>
-                <button type="button" onclick="dialNumber('2')">2</button>
-                <button type="button" onclick="dialNumber('3')">3</button>
-                <button type="button" onclick="dialNumber('4')">4</button>
-                <button type="button" onclick="dialNumber('5')">5</button>
-                <button type="button" onclick="dialNumber('6')">6</button>
-                <button type="button" onclick="dialNumber('7')">7</button>
-                <button type="button" onclick="dialNumber('8')">8</button>
-                <button type="button" onclick="dialNumber('9')">9</button>
+            <form class="js-dtmf-interface" action="" method="post">
+                <button class="dial-number" type="button" onclick="dialNumber('1')">1</button>
+                <button class="dial-number" type="button" onclick="dialNumber('2')">2</button>
+                <button class="dial-number" type="button" onclick="dialNumber('3')">3</button>
+                <button class="dial-number" type="button" onclick="dialNumber('4')">4</button>
+                <button class="dial-number" type="button" onclick="dialNumber('5')">5</button>
+                <button class="dial-number" type="button" onclick="dialNumber('6')">6</button>
+                <button class="dial-number" type="button" onclick="dialNumber('7')">7</button>
+                <button class="dial-number" type="button" onclick="dialNumber('8')">8</button>
+                <button class="dial-number" type="button" onclick="dialNumber('9')">9</button>
                 <button type="button" id="toggleMicrofone">
                     <i class="bi bi-mic-fill"></i>
                 </button>
-                <button type="button" onclick="dialNumber('0')">0</button>
+                <button class="dial-number" type="button" onclick="dialNumber('0')">0</button>
                 <button type="button" id="phoneScreenReset">
                     <i class="bi bi-x-lg"></i>
                 </button>
@@ -38,6 +38,9 @@
         </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="dtmf.js"></script>
 </body>
 </html>
