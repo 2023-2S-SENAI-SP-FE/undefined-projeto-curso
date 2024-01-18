@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Integração do telefone: incluir a biblioteca de ícones Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Integração do telefone: estilos do telefone estão em telefone.css -->
+    <link rel="stylesheet" href="telefone.css">
+
     <title>Telefone</title>
 </head>
 <body>
+
+    <!-- Integração do telefone: div#phone-container -->
     <div id="phone-container">
         <div id="phone-screen"></div>
         <div id="phone-buttons">
@@ -28,20 +35,21 @@
                 <button type="button" id="phoneScreenReset">
                     <i class="bi bi-x-lg"></i>
                 </button>
-                <button type="button" onclick="call()">
+                <button class="btnCall" type="button" onclick="call()">
                     <i class="bi bi-telephone-outbound-fill"></i>
                 </button>
-                <button type="button" onclick="endCall()">
+                <button type="button" id="btnEndCall" onclick="endCall()">
                     <i class="bi bi-telephone-fill"></i>
                 </button>
             </form>
         </div>
     </div>
 
-
+    <!-- Integração do telefone: incluir o jQuery para a geração dos tons DTMF -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- <script src="contador.js"></script> -->
-    <script src="script.js"></script>
+
+    <!-- Integração do telefone: incluir os arquivos de script abaixo -->
+    <script src="telefone.js"></script>
     <script src="dtmf.js"></script>
 </body>
 </html>
