@@ -12,6 +12,19 @@ function dialNumber(number) {
     }
 }
 
+// alterna o mute do microfone
+function alternaMicrofone() {
+    document.querySelector('#microfone .bi').classList.toggle('bi-mic-fill');
+    document.querySelector('#microfone .bi').classList.toggle('bi-mic-mute-fill');
+}
+
+// limpa o que estiver digitado no visor
+document.querySelector('#phoneScreenReset').addEventListener('click', () => {
+    if (!conectado) {
+        phoneScreen.innerHTML = '';
+    }
+})
+
 // realiza uma chamada
 function call() {
     if (!conectado && phoneScreen.innerHTML) {
@@ -68,17 +81,4 @@ function endCall() {
         clearInterval(intervalo);
     }
 }
-
-// alterna o mute do microfone
-document.querySelector('#toggleMicrofone').addEventListener('click', e => {
-    e.target.querySelector('i').classList.toggle('bi-mic-fill');
-    e.target.querySelector('i').classList.toggle('bi-mic-mute-fill');
-})
-
-// limpa o que estiver digitado no visor
-document.querySelector('#phoneScreenReset').addEventListener('click', () => {
-    if (!conectado) {
-        phoneScreen.innerHTML = '';
-    }
-})
 
