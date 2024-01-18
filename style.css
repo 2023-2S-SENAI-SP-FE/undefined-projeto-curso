@@ -26,6 +26,10 @@ body {
     height: 2rem;
 }
 
+.phone-digitos {
+    font-size: 1rem !important;
+}
+
 #phone-buttons form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

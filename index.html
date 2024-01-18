@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Telefone</title>
 </head>
@@ -22,9 +23,9 @@
                 <button type="button" onclick="dialNumber('9')">9</button>
                 <button type="button">🔊</button>
                 <button type="button" onclick="dialNumber('0')">0</button>
-                <button type="button">❌</button>
-                <button type="button" onclick="call()">Call</button>
-                <button type="button" onclick="endCall()">End Call</button>
+                <button type="button" id="phoneScreenReset">❌</button>
+                <button type="button" onclick="call()"><i class="bi bi-telephone-outbound-fill"></i></button>
+                <button type="button" onclick="endCall()"><i class="bi bi-telephone"></i></button>
             </form>
         </div>
     </div>
