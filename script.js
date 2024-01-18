@@ -24,8 +24,8 @@ function call() {
             phoneScreen.insertAdjacentHTML('beforeend', '<br><span id="minutes">00</span>:<span id="seconds">00</span>');
             clearInterval(intervalo);
             intervalo = setInterval(startTimer, 1000);
+            conectado = true;
         }, 4000);
-        conectado = true;
     }
 }
 

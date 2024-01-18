@@ -53,7 +53,7 @@ var dtmfFrequencies = {
     "9": { f1: 852, f2: 1477 },
     "*": { f1: 941, f2: 1209 },
     "0": { f1: 941, f2: 1336 },
-    "#": { f1: 941, f2: 1477 }
+    "\f5c1": { f1: 941, f2: 1477 }
 }
 
 var context = new AudioContext();
