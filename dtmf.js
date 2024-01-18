@@ -1,4 +1,4 @@
-// função do DTMF do telefone
+// gera tons DTMF do telefone
 var AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
 function Tone(context, freq1, freq2) {
