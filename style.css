@@ -361,17 +361,24 @@ input[type='range']::-webkit-slider-thumb::before {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+
+  gap: 20px;
+
+  /* background-color: #fefefe33; */
   margin: auto;
   padding: 20px 20px;
-  border: 1px solid #888;
   /* width: 80%; */
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: right;
+  height: fit-content;
+  border-radius: 2px;
+  background-color: #ffffff40;
+  color: #FF0303;
   font-size: 28px;
   font-weight: bold;
 }
@@ -381,4 +388,8 @@ input[type='range']::-webkit-slider-thumb::before {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
