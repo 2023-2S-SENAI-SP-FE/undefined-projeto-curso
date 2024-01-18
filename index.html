@@ -1,17 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ar Condicionado</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Integração do telefone: incluir a biblioteca de ícones Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Integração do telefone: estilos do telefone estão em telefone.css -->
+    <link rel="stylesheet" href="telefone.css">
+
+    <title>Painel Interativo</title>
 </head>
 <body>
-    <div id="controle-arcondicionado">
-        <p>Temperatura: <span id="temperatura">20</span>°C</p>
-        <button onclick="aumentarTemperatura()">Aumentar</button>
-        <button onclick="diminuirTemperatura()">Diminuir</button>
-    </div>
 
-    <script src="./ar-condicionado.js"></script>
+    <header></header>
+
+    <main class="tela">
+
+        <!-- Elementos ocultos -->
+        <div class="popup-message invisivel">
+            <p></p>
+        </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                 <!-- Integração do telefone: div#phone-container -->
+                <div id="phone-container">
+                    <div id="phone-screen"></div>
+                    <div id="phone-buttons">
+                        <form class="js-dtmf-interface" action="" method="post">
+                            <button type="button" onclick="dialNumber('1')" data-key="1">1</button>
+                            <button type="button" onclick="dialNumber('2')" data-key="2">2</button>
+                            <button type="button" onclick="dialNumber('3')" data-key="3">3</button>
+                            <button type="button" onclick="dialNumber('4')" data-key="4">4</button>
+                            <button type="button" onclick="dialNumber('5')" data-key="5">5</button>
+                            <button type="button" onclick="dialNumber('6')" data-key="6">6</button>
+                            <button type="button" onclick="dialNumber('7')" data-key="7">7</button>
+                            <button type="button" onclick="dialNumber('8')" data-key="8">8</button>
+                            <button type="button" onclick="dialNumber('9')" data-key="9">9</button>
+                            <button type="button" id="microfone" onclick="alternaMicrofone()"  data-key="active">
+                                <i class="bi bi-mic-fill"></i>
+                            </button>
+                            <button type="button" onclick="dialNumber('0')" data-key="0">0</button>
+                            <button type="button" id="phoneScreenReset" data-key="active">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                            <button class="btnCall" type="button" onclick="call()"  data-key="inactive">
+                                <i class="bi bi-telephone-outbound-fill"></i>
+                            </button>
+                            <button type="button" id="btnEndCall" onclick="endCall()" data-key="active">
+                                <i class="bi bi-telephone-fill"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <p>Some text in the Modal..</p> -->
+            </div>
+        </div>
+
+        <!-- Conteúdo visível da página -->
+        <div class="temp" style="color:aliceblue;">
+            <div class="dados-atuais">
+                <div class="local">
+                    <h2 class="cidade">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>São Paulo</span>
+                    </h2>
+                    <h2 class="clima">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <span>
+                            24ºC
+                        </span>
+                    </h2>
+                </div>
+                <h2 id="clock"></h2>
+            </div>
+            <div class="previsoes">
+                <div class="previsao" id="previsao1">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 class="hora-temp">
+                        <p>2 PM</p>
+                        <span>23º</span>
+                    </h2>
+                </div>
+                <div class="previsao" id="previsao2">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 class="hora-temp">
+                        <p>2 PM</p>
+                        <span>23º</span>
+                    </h2>
+                </div>
+                <div class="previsao" id="previsao3">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 class="hora-temp">
+                        <p>2 PM</p>
+                        <span>23º</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7tWP3OG5dWphctKg4NMACt?utm_source=generator&theme=0" width="70%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+        <div class="controles">
+            <div class="controle" id="controle-1">
+                <img src="./assets/icones-tela-controles/lock.svg" alt="Trava as portas">
+            </div>
+            <div class="controle" id="controle-2">
+                <img src="./assets/icones-tela-controles/bluetooth.svg" alt="Liga os bluetooth">
+            </div>
+            <a href="https://open.spotify.com/intl-pt?flow_ctx=b65cbe8c-a422-49e8-af02-717909d9e2ca%3A1705086370">
+                <div class="controle" id="controle-3">
+                    <i class="fa-brands fa-spotify"></i>
+                </div>
+            </a>
+            <div class="controle" id="controle-4">
+                <img src="./assets/icones-tela-controles/call.svg" alt="Faz ligação">
+            </div>
+            <div class="controle" id="controle-5">
+                <img src="./assets/icones-tela-controles/voice.svg" alt="Ativa controles de voz">
+            </div>
+            <div class="controle" id="controle-6">
+                <img src="./assets/icones-tela-controles/healights.svg" alt="Liga farol alto">
+            </div>
+        </div>
+        <div class="espelhos">
+            <div class="container-espelho espelho-esquerdo">
+                <img class="setas seta-esquerda" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-cima" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-direita" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-baixo" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="espelho" src="./assets/icones-tela-controles/car-rearview-mirror-left-icon.svg" alt="espelho esquerdo">
+            </div>
+            <div class="container-espelho espelho-direito">
+                <img class="setas seta-esquerda" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-cima" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-direita" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="setas seta-baixo" src="./assets/icones-tela-controles/arrow.svg" alt="seta de controle de espelho">
+                <img class="espelho" src="./assets/icones-tela-controles/car-rearview-mirror-right-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="controle-ac">
+            <h2>Ar Condicionado</h2>
+            <div class="slidecontainer">
+                <div class="tooltip"></div>
+                <input type="range" min="16" max="36" value="26" class="slider" id="myRange">
+            </div>
+            <div class="controles-ac">
+                <div class="botoes" id="botao-1">
+                    <img src="./assets/icones-tela-controles/ac/air.svg" alt="liga ar">
+                </div>
+                <div class="botoes" id="botao-2">
+                    <img src="./assets/icones-tela-controles/ac/ac.svg" alt="liga ar condicionado">
+                </div>
+                <div class="botoes" id="botao-3">
+                    <img src="./assets/icones-tela-controles/ac/fan.svg" alt="liga ventilador">
+                </div>
+                <div class="botoes" id="botao-4">
+                    <img src="./assets/icones-tela-controles/ac/climate-1.svg" alt="ventila apenas por cima">
+                </div>
+                <div class="botoes" id="botao-5">
+                    <img src="./assets/icones-tela-controles/ac/climate-2.svg" alt="ventila por cima e por baixo">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2024. Alguns direitos reservados.</p></footer>
+
+    <script src="./script.js"></script>
+    <script>
+        //previsão por hora
+        //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+        //previsão atual
+        //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+        //key api
+        //d1ead82ca8b95150aed4ecacf7d3dd2d
+        //lat lon são paulo
+        //-23.533773, -46.625290
+        
+        //https://dev.to/robsonmuniz16/how-to-make-a-popup-html-css-javascript-18ml
+
+
+        function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        var timeString = hours + ":" + minutes + ":" + seconds;
+
+        document.getElementById("clock").innerText = timeString;
+        }
+
+        // Atualizar o relógio a cada segundo
+        setInterval(updateClock, 1000);
+
+        // Inicializar o relógio quando a página carrega
+        updateClock();
+    </script>
+
+    <!-- Integração do telefone: incluir o jQuery para a geração dos tons DTMF -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Integração do telefone: incluir os arquivos de script abaixo -->
+    <script src="telefone.js"></script>
+    <script src="dtmf.js"></script>
 </body>
 </html>
