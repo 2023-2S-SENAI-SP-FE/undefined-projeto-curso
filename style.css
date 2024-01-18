@@ -53,3 +53,14 @@ button:nth-child(13) {
 button active {
     background-color: #555;
 }
+
+.bi-mic-fill,
+.bi-telephone-outbound-fill {
+    color: green;
+}
+
+.bi-mic-mute-fill,
+.bi-telephone,
+.bi-x-lg {
+    color: red;
+}
