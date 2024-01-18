@@ -19,26 +19,26 @@
         <div id="phone-screen"></div>
         <div id="phone-buttons">
             <form class="js-dtmf-interface" action="" method="post">
-                <button class="dial-number" type="button" onclick="dialNumber('1')">1</button>
-                <button class="dial-number" type="button" onclick="dialNumber('2')">2</button>
-                <button class="dial-number" type="button" onclick="dialNumber('3')">3</button>
-                <button class="dial-number" type="button" onclick="dialNumber('4')">4</button>
-                <button class="dial-number" type="button" onclick="dialNumber('5')">5</button>
-                <button class="dial-number" type="button" onclick="dialNumber('6')">6</button>
-                <button class="dial-number" type="button" onclick="dialNumber('7')">7</button>
-                <button class="dial-number" type="button" onclick="dialNumber('8')">8</button>
-                <button class="dial-number" type="button" onclick="dialNumber('9')">9</button>
-                <button type="button" id="microfone" onclick="alternaMicrofone()">
+                <button type="button" onclick="dialNumber('1')" data-key="1">1</button>
+                <button type="button" onclick="dialNumber('2')" data-key="2">2</button>
+                <button type="button" onclick="dialNumber('3')" data-key="3">3</button>
+                <button type="button" onclick="dialNumber('4')" data-key="4">4</button>
+                <button type="button" onclick="dialNumber('5')" data-key="5">5</button>
+                <button type="button" onclick="dialNumber('6')" data-key="6">6</button>
+                <button type="button" onclick="dialNumber('7')" data-key="7">7</button>
+                <button type="button" onclick="dialNumber('8')" data-key="8">8</button>
+                <button type="button" onclick="dialNumber('9')" data-key="9">9</button>
+                <button type="button" id="microfone" onclick="alternaMicrofone()"  data-key="active">
                     <i class="bi bi-mic-fill"></i>
                 </button>
-                <button class="dial-number" type="button" onclick="dialNumber('0')">0</button>
-                <button type="button" id="phoneScreenReset">
+                <button type="button" onclick="dialNumber('0')" data-key="0">0</button>
+                <button type="button" id="phoneScreenReset" data-key="active">
                     <i class="bi bi-x-lg"></i>
                 </button>
-                <button class="btnCall" type="button" onclick="call()">
+                <button class="btnCall" type="button" onclick="call()"  data-key="inactive">
                     <i class="bi bi-telephone-outbound-fill"></i>
                 </button>
-                <button type="button" id="btnEndCall" onclick="endCall()">
+                <button type="button" id="btnEndCall" onclick="endCall()" data-key="active">
                     <i class="bi bi-telephone-fill"></i>
                 </button>
             </form>

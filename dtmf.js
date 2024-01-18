@@ -53,7 +53,8 @@ var dtmfFrequencies = {
     "9": { f1: 852, f2: 1477 },
     "*": { f1: 941, f2: 1209 },
     "0": { f1: 941, f2: 1336 },
-    "\f5c1": { f1: 941, f2: 1477 }
+    "active": { f1: 390, f2: 390 },
+    "inactive": { f1: 0, f2: 0 }
 }
 
 var context = new AudioContext();
@@ -65,10 +66,10 @@ var context = new AudioContext();
 var dtmf = new Tone(context, 350, 440);
 var ringbackTone = new Tone(context, 400, 450);
 
-$(".js-dtmf-interface button.dial-number").on("mousedown touchstart", function (e) {
+$(".js-dtmf-interface button").on("mousedown touchstart", function (e) {
     e.preventDefault();
 
-    var keyPressed = $(this).html(); // this gets the number/character that was pressed
+    var keyPressed = $(this).attr('data-key'); // this gets the number/character that was pressed
     var frequencyPair = dtmfFrequencies[keyPressed]; // this looks up which frequency pair we need
 
     // this sets the freq1 and freq2 properties
