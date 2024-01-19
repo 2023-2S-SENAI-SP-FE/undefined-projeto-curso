@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
     function hideLoadingVideo() {
       const loadingVideoContainer = document.querySelector('.loading-video-container');
-      loadingVideoContainer.style.display = 'none';
+      loadingVideoContainer.style.transitionDuration = '1s';
+      loadingVideoContainer.style.opacity = '0';
+      setTimeout(() => {
+          loadingVideoContainer.style.display = 'none';
+        
+      }, 1000);
     }
   
 });

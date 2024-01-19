@@ -33,6 +33,20 @@ main {
   align-items: center;
   z-index: 999; 
 }
+
+.someVideo {
+  animation: videoSome 1s ease-in-out forwards;
+}
+
+@keyframes videSome {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
   
 .loading-video-container video {
   width: 100%;
